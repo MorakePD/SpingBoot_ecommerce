@@ -1,4 +1,4 @@
-package ecommerce.cars.cars;
+package ecommerce.cars;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
