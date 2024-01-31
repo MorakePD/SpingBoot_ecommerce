@@ -1,17 +1,15 @@
-package ecommerce.cars.domain.entities;
+package ecommerce.cars.domain.dto;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "sellers")
-public class SellerEntity {
+public class SellerDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seller_id_seq")
     private Long seller_id;
 
     private String seller_name;
