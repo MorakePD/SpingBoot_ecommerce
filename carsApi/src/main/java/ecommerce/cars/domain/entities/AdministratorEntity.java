@@ -3,7 +3,7 @@ package ecommerce.cars.domain.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -14,7 +14,7 @@ public class AdministratorEntity{
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "administrator_id_seq")
     private Long administrator_id;
 
-    private String user_name;
+    private String username;
 
     private String password;
 
