@@ -30,8 +30,8 @@ public class CarEntity {
     private Double price;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "seller_id")
-    private SellerEntity sellerEntity;
+    @JoinColumn(name = "user_id")
+    private UserEntity sellerEntity;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "brand_id")

@@ -1,18 +1,19 @@
 package ecommerce.cars.domain.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SellerDto {
+@Builder
+public class UserDto {
 
-    private Long seller_id;
+    private Long user_id;
 
-    private String seller_name;
+    private String user_name;
 
     private String phone_number;
 
@@ -21,4 +22,5 @@ public class SellerDto {
     private String password;
 
     private String email;
+
 }

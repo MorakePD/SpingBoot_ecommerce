@@ -1,6 +1,5 @@
 package ecommerce.cars.domain.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +17,7 @@ public class OrderDto {
 
     private Date order_date;
 
-    private CustomerDto customerDto;
+    private UserDto userDto;
 
     private CarDto carDto;
 }

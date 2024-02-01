@@ -8,13 +8,13 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Builder
-@Table(name = "customers")
-public class CustomerEntity{
+@Table(name = "users")
+public class UserEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer_id_seq")
-    private Long customer_id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
+    private Long user_id;
 
-    private String customer_name;
+    private String user_name;
 
     private String phone_number;
 

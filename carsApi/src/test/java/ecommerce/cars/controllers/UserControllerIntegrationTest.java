@@ -1,10 +1,9 @@
 package ecommerce.cars.controllers;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ecommerce.cars.TestDataUtil;
-import ecommerce.cars.domain.entities.CustomerEntity;
-import ecommerce.cars.services.CustomerService;
+import ecommerce.cars.domain.entities.UserEntity;
+import ecommerce.cars.services.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,28 +20,28 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @ExtendWith(SpringExtension.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 @AutoConfigureMockMvc
-public class CustomerControllerIntegrationTest {
-    private CustomerService customerService;
+public class UserControllerIntegrationTest {
+    private UserService userService;
 
     private MockMvc mockMvc;
 
     private ObjectMapper objectMapper;
 
     @Autowired
-    public CustomerControllerIntegrationTest(CustomerService customerService, MockMvc mockMvc, ObjectMapper objectMapper) {
-        this.customerService = customerService;
+    public UserControllerIntegrationTest(UserService userService, MockMvc mockMvc, ObjectMapper objectMapper) {
+        this.userService = userService;
         this.mockMvc = mockMvc;
         this.objectMapper = objectMapper;
     }
 
     @Test
-    public void testThatCreateCustomerSuccessfullyReturnsHttp201Created() throws Exception {
-        CustomerEntity customerEntity = TestDataUtil.createTestCustomerEntity();
-        customerEntity.setCustomer_id(null);
-        String customerJson = objectMapper.writeValueAsString(customerEntity);
+    public void testThatCreateUserSuccessfullyReturnsHttp201Created() throws Exception {
+        UserEntity userEntity = TestDataUtil.createTestUserEntity();
+        userEntity.setUser_id(null);
+        String customerJson = objectMapper.writeValueAsString(userEntity);
 
         mockMvc.perform(
-                MockMvcRequestBuilders.post("/customers")
+                MockMvcRequestBuilders.post("/users")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(customerJson)
         ).andExpect(

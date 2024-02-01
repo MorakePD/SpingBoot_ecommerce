@@ -22,8 +22,8 @@ public class OrderEntity {
     private Date order_date;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customer_id")
-    private CustomerEntity customerEntity;
+    @JoinColumn(name = "user_id")
+    private UserEntity userEntity;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "vin_number")

@@ -25,7 +25,7 @@ public class CarDto {
 
     private Double price;
 
-    private SellerDto sellerDto;
+    private UserDto sellerDTO;
 
     private BrandDto brandDto;
 }
